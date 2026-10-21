@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:tizen="http://tizen.org/ns/widgets"
+        id="http://watchnav.local/watchnav"
+        version="1.0.0"
+        viewmodes="maximized">
+    <tizen:application id="WatchNav0.watchnav" package="WatchNav0" required_version="4.0"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.normal.360.360"/>
+    <icon src="icons/icon.png"/>
+    <name>WatchNav</name>
+    <tizen:profile name="wearable"/>
+    <access origin="*" subdomains="true"/>
+    <tizen:allow-navigation>*</tizen:allow-navigation>
+    <privileges>
+        <tizen:privilege name="http://tizen.org/privilege/location"/>
+        <tizen:privilege name="http://tizen.org/privilege/internet"/>
+        <tizen:privilege name="http://tizen.org/privilege/network.get"/>
+        <tizen:privilege name="http://tizen.org/privilege/alarm"/>
+        <tizen:privilege name="http://tizen.org/privilege/display"/>
+        <tizen:privilege name="http://tizen.org/privilege/vibration"/>
+        <tizen:privilege name="http://tizen.org/privilege/power"/>
+        <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    </privileges>
+    <tizen:setting screen-orientation="portrait"
+                   context-menu="disable"
+                   background-support="enable"
+                   encryption="disable"
+                   hwkey-event="enable"/>
+</widget>
