@@ -87,7 +87,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         u = urlparse(self.path)
         q = parse_qs(u.query)
-        if u.path == "/health":
+        if u.path in ("/", "/health"):
             return self._json(200, {"ok": True, "routes": len(_routes)})
         if u.path == "/pair":
             return self._json(200, {"code": f"{secrets.randbelow(1000000):06d}"})
